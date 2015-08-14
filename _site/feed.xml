@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
+    <title>Adam Stockermans</title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 14 Apr 2015 17:40:37 -0400</pubDate>
-    <lastBuildDate>Tue, 14 Apr 2015 17:40:37 -0400</lastBuildDate>
+    <link>adamstockermans.com/</link>
+    <atom:link href="adamstockermans.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 15 Apr 2015 11:13:44 -0400</pubDate>
+    <lastBuildDate>Wed, 15 Apr 2015 11:13:44 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -21,8 +21,8 @@
 &lt;p&gt;&lt;img src=&quot;/images/local/fingerkey-1.jpg&quot; alt=&quot;test&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 30 Nov 2014 00:00:00 -0500</pubDate>
-        <link>/2014/11/30/testtest.html</link>
-        <guid isPermaLink="true">/2014/11/30/testtest.html</guid>
+        <link>adamstockermans.com/testtest</link>
+        <guid isPermaLink="true">adamstockermans.com/testtest</guid>
         
         <category>test_tag</category>
         
@@ -66,8 +66,8 @@
 &lt;p class=&quot;text-muted&quot;&gt;btw, I dont use twitter much&lt;/p&gt;
 </description>
         <pubDate>Sun, 30 Nov 2014 00:00:00 -0500</pubDate>
-        <link>/2014/11/30/introducing-autm-rb.html</link>
-        <guid isPermaLink="true">/2014/11/30/introducing-autm-rb.html</guid>
+        <link>adamstockermans.com/introducing-autm-rb</link>
+        <guid isPermaLink="true">adamstockermans.com/introducing-autm-rb</guid>
         
         <category>Autm-rb</category>
         
@@ -126,8 +126,8 @@
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
         <pubDate>Sun, 30 Nov 2014 00:00:00 -0500</pubDate>
-        <link>/2014/11/30/css.html</link>
-        <guid isPermaLink="true">/2014/11/30/css.html</guid>
+        <link>adamstockermans.com/css</link>
+        <guid isPermaLink="true">adamstockermans.com/css</guid>
         
         <category>test</category>
         
@@ -205,11 +205,11 @@ Or just  edit &lt;mark&gt;stylesheets/style.css&lt;/mark&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;thats-it&quot;&gt;That’s it!&lt;/h2&gt;
 
-&lt;p&gt;Here’re some more examples &lt;a href=&quot;/2014/08/25/example-bootstrap.html&quot;&gt;Autm-rb some bootstrap&lt;/a&gt; to learn more.&lt;/p&gt;
+&lt;p&gt;Here’re some more examples &lt;a href=&quot;/example-bootstrap&quot;&gt;Autm-rb some bootstrap&lt;/a&gt; to learn more.&lt;/p&gt;
 </description>
         <pubDate>Tue, 26 Aug 2014 00:00:00 -0400</pubDate>
-        <link>/2014/08/26/exmaple-css.html</link>
-        <guid isPermaLink="true">/2014/08/26/exmaple-css.html</guid>
+        <link>adamstockermans.com/exmaple-css</link>
+        <guid isPermaLink="true">adamstockermans.com/exmaple-css</guid>
         
         <category>read this first</category>
         
@@ -277,8 +277,8 @@ Or just  edit &lt;mark&gt;stylesheets/style.css&lt;/mark&gt;&lt;/p&gt;
 &lt;p&gt;Autm-rb uses &lt;a href=&quot;https://github.com/twbs/bootstrap-sass&quot;&gt;bootstrap-sass&lt;/a&gt;, so all of the variables are customizable.&lt;/p&gt;
 </description>
         <pubDate>Mon, 25 Aug 2014 00:00:00 -0400</pubDate>
-        <link>/2014/08/25/example-bootstrap.html</link>
-        <guid isPermaLink="true">/2014/08/25/example-bootstrap.html</guid>
+        <link>adamstockermans.com/example-bootstrap</link>
+        <guid isPermaLink="true">adamstockermans.com/example-bootstrap</guid>
         
         <category>read this first</category>
         
