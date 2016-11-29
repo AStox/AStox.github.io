@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/public/stylesheets/styles.css">
     <link rel="stylesheet" href="/public/stylesheets/pygment_trac.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> 
-    <link rel="canonical" href="adamstockermans.com/exmaple-css">
+    <link rel="canonical" href="http://localhost:4000/exmaple-css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
       <link rel="icon" type="image/x-icon"  href="/favicon.ico" />
     <title>Autm-rb essential stuff | Adam Stockermans</title>
@@ -24,20 +24,21 @@
           <div id="title">
   <h1>
 <!--     
-		  <a id="git-ic" href="https://github.com/astox"><i class="fa fa-github"></i></a>	
+		  <a id="git-ic" href="https://github.com/astox"><i class="fa fa-github"></i></a>
     
 
     
       <a id="so-ic" href=""><i class="fa fa-stack-overflow"></i></a>
      -->
-		
+
     <a id="sitename" href="/">www.AdamStockermans.com</a>
   </h1>
 
   <!-- Add something about you in p tag-->
-  <p>Jr Full Stack Web Developer</p>
+  <p>Full Stack Web Developer</p>
+  <p>Game Developer</p>
   <hr/>
-  
+
   <span class="credits left">
   <a href="/resume">Resume</a> |
   <a href="/projects">Projects</a> 
@@ -45,18 +46,14 @@
 
 <span class="credits right">
 
-</span> 
-	 
+</span>
+
 </div>
-
-
 
       
           <div class="post-title">
     <h1>Autm-rb essential stuff</h1>
     <p class="text-muted">26 Aug 2014 | <i class="fa fa-tag"></i>
-  
-    
   
   
   <a class="text-muted" href="/tags/#read this first">read this first</a>,
@@ -75,7 +72,7 @@
 
 <h2 id="headings">Headings</h2>
 
-<p><code>h1</code> tags are reserved for the post title. Don’t use them. Use <code>h2</code> tags mostly, and use <code>h3</code> if you need subheadings.
+<p><code class="highlighter-rouge">h1</code> tags are reserved for the post title. Don’t use them. Use <code class="highlighter-rouge">h2</code> tags mostly, and use <code class="highlighter-rouge">h3</code> if you need subheadings.
 Or just  edit <mark>stylesheets/style.css</mark></p>
 
 <h2 id="paragraphs">Paragraphs</h2>
@@ -106,7 +103,7 @@ Or just  edit <mark>stylesheets/style.css</mark></p>
 
 <h2 id="tables">Tables</h2>
 
-<p>You don’t need to add the Bootstrap <code>.table</code> class to <code>table</code>. This is how it works.</p>
+<p>You don’t need to add the Bootstrap <code class="highlighter-rouge">.table</code> class to <code class="highlighter-rouge">table</code>. This is how it works.</p>
 
 <table>
   <thead>
@@ -127,11 +124,11 @@ Or just  edit <mark>stylesheets/style.css</mark></p>
 
 <h2 id="code">Code</h2>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
 <span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;jekyll&#39;</span><span class="p">)</span>
-<span class="c1">#=&gt; prints &#39;Hi, jekyll&#39; to STDOUT.</span></code></pre></div>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'jekyll'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, jekyll' to STDOUT.</span></code></pre></figure>
 
 <h2 id="images">Images</h2>
 
@@ -207,8 +204,8 @@ Or just  edit <mark>stylesheets/style.css</mark></p>
           </h3>
             
           <h2 class="post-title-link"><a href="/example-bootstrap">Autm-rb some bootstrap</a></h2>
-          <h3 id="to-customize-default-bootstrap-components-and-variables-use-markstylesheetsbsscssmark">To customize default bootstrap components and variables use <mark>stylesheets/bs.scss</mark></h3>
-<p>You can use all the available components of TwitterBootstrap. Here are some of them.</p>
+          <p>###To customize default bootstrap components and variables use <mark>stylesheets/bs.scss</mark>
+You can use all the available components of TwitterBootstrap. Here are some of them.</p>
 
 
         </div>
@@ -222,20 +219,19 @@ Or just  edit <mark>stylesheets/style.css</mark></p>
           </h3>
             
           <h2 class="post-title-link"><a href="/css">Css</a></h2>
-          <p>{% highlight scss %}
-code {
-  font-family: “Lucida Sans”, Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
-  font-size: 13px;
-  margin: 0 4px;
-  padding: 4px 6px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-    color: #848282;
-}
-{% endhighlight %}</p>
+          
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nt">code</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">"Lucida Sans"</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="n">Bitstream</span> <span class="n">Vera</span> <span class="n">Sans</span> <span class="n">Mono</span><span class="o">,</span> <span class="n">Lucida</span> <span class="n">Console</span><span class="o">,</span> <span class="n">Terminal</span><span class="o">,</span> <span class="nb">monospace</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">13px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">4px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">4px</span> <span class="m">6px</span><span class="p">;</span>
+  <span class="na">-webkit-border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+  <span class="na">-moz-border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+  <span class="na">-ms-border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+  <span class="na">-o-border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="mh">#848282</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 
         </div>
@@ -248,7 +244,7 @@ code {
           <footer>
 <hr/>
   <div class="left">  
-    &copy;2015.
+    &copy;2016.
     Built with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and
     <a href="https://github.com/railsr/autm-rb" target="_blank">Autm-rb</a>
   </div>
