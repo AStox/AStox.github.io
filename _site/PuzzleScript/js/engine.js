@@ -54,9 +54,9 @@ var titletemplate_firstgo = [
 	"..................................",
 	"..........#.start game.#..........",
 	"..................................",
-	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start.......................",
 	".Z to undo, R to restart..........",
 	".................................."];
 
@@ -70,10 +70,10 @@ var titletemplate_select0 = [
 	"..................................",
 	".............continue.............",
 	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
-	".Z to undo, R to restart..........",
-	".................................."];
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start.......................",
+	".Z to undo, R to restart.........."];
 
 var titletemplate_select1 = [
 	"..................................",
@@ -85,10 +85,10 @@ var titletemplate_select1 = [
 	"..................................",
 	"...........#.continue.#...........",
 	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
-	".Z to undo, R to restart..........",
-	".................................."];
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start.......................",
+	".Z to undo, R to restart.........."];
 
 
 var titletemplate_firstgo_selected = [
@@ -101,10 +101,10 @@ var titletemplate_firstgo_selected = [
 	"###########.start game.###########",
 	"..................................",
 	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
-	".Z to undo, R to restart..........",
-	".................................."];
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start.......................",
+	".Z to undo, R to restart.........."];
 
 var titletemplate_select0_selected = [
 	"..................................",
@@ -116,10 +116,10 @@ var titletemplate_select0_selected = [
 	"..................................",
 	".............continue.............",
 	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
-	".Z to undo, R to restart..........",
-	".................................."];
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start.......................",
+	".Z to undo, R to restart.........."];
 
 var titletemplate_select1_selected = [
 	"..................................",
@@ -131,10 +131,10 @@ var titletemplate_select1_selected = [
 	"..................................",
 	"############.continue.############",
 	"..................................",
-	".arrow keys to move...............",
-	".X to action......................",
-	".Z to undo, R to restart..........",
-	".................................."];
+	".arrow keys to move ghost.........",
+	".WASD keys to move light..........",
+	".X to start.......................",
+	".Z to undo, R to restart.........."];
 
 var titleImage=[];
 var titleWidth=titletemplate_select1[0].length;
@@ -167,7 +167,6 @@ function generateTitleScreen()
 	if (state.metadata.title!==undefined) {
 		title=state.metadata.title;
 	}
-
 	if (titleMode===0) {
 		if (titleSelected) {
 			titleImage = deepClone(titletemplate_firstgo_selected);
@@ -563,6 +562,8 @@ function level4Serialization() {
 }
 
 function setGameState(_state, command, randomseed) {
+	window.console.log(_state);
+	window.console.log(command);
 	oldflickscreendat=[];
 	timer=0;
 	autotick=0;
@@ -956,7 +957,11 @@ var dirMasksDelta = {
      4:[-1,0],//'left'  :
      8:[1,0],//'right' :
      15:[0,0],//'?' :
-     16:[0,0],//'action' :
+	 16:[0,0],//'action' :
+	 32: [0,0], // 'actionup' :
+	 64: [0,0], // 'actiondown' :
+	 128: [0,0], // 'actionleft' :
+	 256: [0,0], // 'actionright' :
      3:[0,0]//'no'
 };
 
@@ -966,7 +971,11 @@ var dirMaskName = {
      4:'left'  ,
      8:'right',
      15:'?' ,
-     16:'action',
+	 16:'action',
+	 32: 'actionup',
+	 64: 'actiondown',
+	 128: 'actionleft',
+	 256: 'actionright',
      3:'no'
 };
 
@@ -2216,15 +2225,15 @@ function processInput(dir,dontCheckWin,dontModify) {
 	 	if (dir===-1) {
 	 		consolePrint('Turn starts with no input.')
 	 	} else {
-	 		consolePrint('=======================');
-			consolePrint('Turn starts with input of ' + ['up','left','down','right','action'][dir]+'.');
+			consolePrint('=======================');
+			consolePrint('Turn starts with input of ' + ['up','left','down','right','action','actionup','actiondown','actionleft','actionright'][dir]+'.');
 	 	}
 	}
 
 	var bak = backupLevel();
 
 	var playerPositions=[];
-    if (dir<=4) {
+    if (dir<=8) {
     	if (dir>=0) {
 	        switch(dir){
 	            case 0://up
@@ -2250,6 +2259,26 @@ function processInput(dir,dontCheckWin,dontModify) {
 	            case 4://action
 	            {
 	                dir=parseInt('10000', 2);;
+	                break;
+				}
+				case 5://actionup
+	            {
+	                dir=parseInt('100000', 2);;
+	                break;
+				}
+				case 6://actiondown
+	            {
+	                dir=parseInt('1000000', 2);;
+	                break;
+				}
+				case 7://actionleft
+	            {
+	                dir=parseInt('10000000', 2);;
+	                break;
+				}
+				case 8://actionright
+	            {
+	                dir=parseInt('100000000', 2);;
 	                break;
 	            }
 	        }
