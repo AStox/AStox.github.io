@@ -19,8 +19,9 @@ disqus:
 #google analytics
 google:
     tracking-id: "UA-52459587-1" #paste your tracking id here
-gems:
+plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # This is used by feed.xml. Uncomment if you want to use it.
 # description: "..."
