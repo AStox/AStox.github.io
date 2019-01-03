@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 26 Sep 2018 22:22:02 -0400</pubDate>
-    <lastBuildDate>Wed, 26 Sep 2018 22:22:02 -0400</lastBuildDate>
+    <pubDate>Thu, 03 Jan 2019 12:45:34 +0100</pubDate>
+    <lastBuildDate>Thu, 03 Jan 2019 12:45:34 +0100</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -20,7 +20,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/local/fingerkey-1.jpg&quot; alt=&quot;test&quot; /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 30 Nov 2014 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 30 Nov 2014 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/testtest</link>
         <guid isPermaLink="true">http://localhost:4000/testtest</guid>
         
@@ -65,7 +65,7 @@
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/railsr7&quot; class=&quot;twitter-follow-button&quot; data-show-count=&quot;true&quot; data-size=&quot;large&quot; data-dnt=&quot;true&quot;&gt;Follow @railsr7&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&quot;text-muted&quot;&gt;btw, I dont use twitter much&lt;/p&gt;
 </description>
-        <pubDate>Sun, 30 Nov 2014 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 30 Nov 2014 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/introducing-autm-rb</link>
         <guid isPermaLink="true">http://localhost:4000/introducing-autm-rb</guid>
         
@@ -125,7 +125,7 @@
   &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'unicorn'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;s1&quot;&gt;'4.8.3'&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 </description>
-        <pubDate>Sun, 30 Nov 2014 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 30 Nov 2014 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/css</link>
         <guid isPermaLink="true">http://localhost:4000/css</guid>
         
@@ -207,7 +207,7 @@ Or just  edit &lt;mark&gt;stylesheets/style.css&lt;/mark&gt;&lt;/p&gt;
 
 &lt;p&gt;Here’re some more examples &lt;a href=&quot;/example-bootstrap&quot;&gt;Autm-rb some bootstrap&lt;/a&gt; to learn more.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 26 Aug 2014 00:00:00 -0400</pubDate>
+        <pubDate>Tue, 26 Aug 2014 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/exmaple-css</link>
         <guid isPermaLink="true">http://localhost:4000/exmaple-css</guid>
         
@@ -276,7 +276,7 @@ You can use all the available components of TwitterBootstrap. Here are some of t
 
 &lt;p&gt;Autm-rb uses &lt;a href=&quot;https://github.com/twbs/bootstrap-sass&quot;&gt;bootstrap-sass&lt;/a&gt;, so all of the variables are customizable.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 25 Aug 2014 00:00:00 -0400</pubDate>
+        <pubDate>Mon, 25 Aug 2014 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/example-bootstrap</link>
         <guid isPermaLink="true">http://localhost:4000/example-bootstrap</guid>
         
