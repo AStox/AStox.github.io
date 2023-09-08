@@ -2,7 +2,7 @@ const ejs = require("ejs");
 const fs = require("fs");
 const path = require("path");
 
-// Make sure the directory exists
+// Make sure the directory  exists
 const outputDir = "./public";
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
