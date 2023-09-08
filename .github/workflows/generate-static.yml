@@ -1,0 +1,40 @@
+name: Generate Static HTML from EJS
+
+on:
+  push:
+    branches:
+      - main # Trigger the workflow on push to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14" # Use Node.js v14.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate Static HTML
+        run: |
+          const ejs = require('ejs');
+          const fs = require('fs');
+          ejs.renderFile('./views/home.ejs', {}, {}, function(err, str) {
+            if (err) {
+              console.error(err);
+              process.exit(1);
+            }
+            fs.writeFileSync('./public/index.html', str);
+          });
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
