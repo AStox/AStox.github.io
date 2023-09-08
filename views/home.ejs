@@ -41,6 +41,11 @@
     />
     <meta name="twitter:image" content="public/images/adamstox.jpg" />
 
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -58,10 +63,20 @@
     <!-- <meta name="google-site-verification" content="your-google-verification-code" /> -->
   </head>
   <body>
-    <%- include('partials/header') %>
+    <header class="list-container">
+      <h1>Adam Stockermans</h1>
+      <p class="subtitle">Developer</p>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">AI</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">Smart Contracts</a></li>
+        <li><a href="#">Art</a></li>
+      </ul>
+    </nav>
     <main>
-      <h1>My Projects</h1>
-      <!-- Project list here -->
+      <!-- Content Here -->
     </main>
   </body>
 </html>
