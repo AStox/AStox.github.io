@@ -22,16 +22,7 @@ jobs:
         run: npm install
 
       - name: Generate Static HTML
-        run: |
-          const ejs = require('ejs');
-          const fs = require('fs');
-          ejs.renderFile('./views/home.ejs', {}, {}, function(err, str) {
-            if (err) {
-              console.error(err);
-              process.exit(1);
-            }
-            fs.writeFileSync('./public/index.html', str);
-          });
+        run: node generate-html.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
