@@ -1,72 +1,122 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Overview</title>
-    <!-- Basic Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adam Stockermans</title>
+    <head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO-Focused Meta Tags -->
-    <meta name="title" content="Adam Stox - Game Developer, Solidity Developer, Digital Artist" />
-    <meta
-      name="description"
-      content="Portfolio of Adam Stox, a multifaceted developer and digital artist specializing in game development, blockchain development, and digital art."
-    />
-    <meta
-      name="keywords"
-      content="Adam Stox, Portfolio, Game Development, Solidity, Digital Art, Blockchain, Ethereum, Graphics Development, WebGL"
-    />
+  <!-- SEO-Focused Meta Tags -->
+  <meta name="title" content="Adam Stox - Game Developer, Solidity Developer, Digital Artist" />
+  <meta
+    name="description"
+    content="Portfolio of Adam Stox, a multifaceted developer and digital artist specializing in game development, blockchain development, and digital art."
+  />
+  <meta
+    name="keywords"
+    content="Adam Stox, Portfolio, Game Development, Solidity, Digital Art, Blockchain, Ethereum, Graphics Development, WebGL"
+  />
 
-    <!-- Open Graph / Social Media -->
-    <meta
-      property="og:title"
-      content="Adam Stox - Game Developer, Solidity Developer, Digital Artist"
-    />
-    <meta
-      property="og:description"
-      content="Explore the portfolio of Adam Stox, skilled in game development, blockchain tech, and digital artistry."
-    />
-    <meta property="og:image" content="public/images/adamstox.jpg" />
-    <meta property="og:url" content="adamstockermans.com" />
+  <!-- Open Graph / Social Media -->
+  <meta
+    property="og:title"
+    content="Adam Stox - Game Developer, Solidity Developer, Digital Artist"
+  />
+  <meta
+    property="og:description"
+    content="Explore the portfolio of Adam Stox, skilled in game development, blockchain tech, and digital artistry."
+  />
+  <meta property="og:image" content="public/images/adamstox.jpg" />
+  <meta property="og:url" content="adamstockermans.com" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Adam Stox - Game Developer, Solidity Developer, Digital Artist"
-    />
-    <meta
-      name="twitter:description"
-      content="Portfolio of Adam Stox, a versatile developer and digital artist."
-    />
-    <meta name="twitter:image" content="public/images/adamstox.jpg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Adam Stox - Game Developer, Solidity Developer, Digital Artist"
+  />
+  <meta
+    name="twitter:description"
+    content="Portfolio of Adam Stox, a versatile developer and digital artist."
+  />
+  <meta name="twitter:image" content="public/images/adamstox.jpg" />
 
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Adam Stox",
-        "jobTitle": "Game Developer, Solidity Developer, Digital Artist",
-        "url": "https://adamstockermans.com",
-        "sameAs": [
-          "https://www.twitter.com/stoxophone",
-        ]
-      }
-    </script>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Lato:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Optional: Google Verification if you're using Google Search Console -->
-    <!-- <meta name="google-site-verification" content="your-google-verification-code" /> -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Adam Stox",
+      "jobTitle": "Game Developer, Solidity Developer, Digital Artist",
+      "url": "https://adamstockermans.com",
+      "sameAs": [
+        "https://www.twitter.com/stoxophone",
+      ]
+    }
+  </script>
+
+  Optional: Google Verification if you're using Google Search Console -->
+  <meta name="google-site-verification" content="your-google-verification-code" />
+</head>
+
   </head>
   <body>
+    <header>
+  <div class="left-container">
+    <h1 class="first-name">Adam</h1>
     <nav>
-  <a href="/">Home</a>
-  <a href="/projects/project1">Projects</a>
-  <!-- Additional links -->
-</nav>
+      <ul>
+        <li><a href="/projects/ai">AI</a></li>
+        <li><a href="/projects/games">Games</a></li>
+        <li><a href="/projects/smartcontracts">Smart Contracts</a></li>
+        <li><a href="/projects/art">Art</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="right-container">
+    <h1 class="last-name">Stockermans</h1>
+    <div class="subtitle-container">
+      <p class="subtitle" id="developerSubtitle">Developer</p>
+    </div>
+  </div>
+</header>
+<script>
+      $(document).ready(function(){
+        const subtitle = $("#developerSubtitle");
+        const originalPos = subtitle.position();
+        console.log("originalPos", originalPos);
+    $("nav ul li").hover(
+      function() {
+        const offset = $(this).position();
+        console.log("offset", offset);
+        subtitle.css({
+          position: "relative",
+          top: offset.top - originalPos.top - 1,
+        });
+      },
+      function() {
+        const subtitle = $("#developerSubtitle");
+        subtitle.css({
+          top: 0,
+        });
+      }
+    );
+  });
+</script>
 
     <main>
-      <h1>My Projects</h1>
-      <!-- Project list here -->
+      <!-- Content Here -->
     </main>
+    <footer>
+  <p>&copy; 2023 Adam Stockermans. All rights reserved.</p>
+</footer>
+
   </body>
 </html>
