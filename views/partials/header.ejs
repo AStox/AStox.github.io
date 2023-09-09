@@ -1,5 +1,42 @@
-<nav>
-  <a href="/">Home</a>
-  <a href="/projects/project1">Projects</a>
-  <!-- Additional links -->
-</nav>
+<header>
+  <div class="left-container">
+    <h1 class="first-name">Adam</h1>
+    <nav>
+      <ul>
+        <li><a href="/projects/ai">AI</a></li>
+        <li><a href="/projects/games">Games</a></li>
+        <li><a href="/projects/smartcontracts">Smart Contracts</a></li>
+        <li><a href="/projects/art">Art</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="right-container">
+    <h1 class="last-name">Stockermans</h1>
+    <div class="subtitle-container">
+      <p class="subtitle" id="developerSubtitle">Developer</p>
+    </div>
+  </div>
+</header>
+<script>
+      $(document).ready(function(){
+        const subtitle = $("#developerSubtitle");
+        const originalPos = subtitle.position();
+        console.log("originalPos", originalPos);
+    $("nav ul li").hover(
+      function() {
+        const offset = $(this).position();
+        console.log("offset", offset);
+        subtitle.css({
+          position: "relative",
+          top: offset.top - originalPos.top - 1,
+        });
+      },
+      function() {
+        const subtitle = $("#developerSubtitle");
+        subtitle.css({
+          top: 0,
+        });
+      }
+    );
+  });
+</script>
