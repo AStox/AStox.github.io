@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.yourwebsite.com/</loc>
+    <loc>http://www.adamstockermans.com/</loc>
   </url>
   <url>
-    <loc>http://www.yourwebsite.com/project/game-title</loc>
+    <loc>http://www.adamstockermans.com/projects/ai</loc>
+  </url>
+  <url>
+    <loc>http://www.adamstockermans.com/projects/games</loc>
+  </url>
+  <url>
+    <loc>http://www.adamstockermans.com/projects/smartcontracts</loc>
+  </url>
+  <url>
+    <loc>http://www.adamstockermans.com/projects/art</loc>
   </url>
 </urlset>
