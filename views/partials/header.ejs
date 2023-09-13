@@ -1,4 +1,4 @@
-<div class="full-name">
+<div class="initials">
   <h1>AS</h1>
 </div>
 <header>
@@ -53,6 +53,9 @@
       $(".category-link").hover(
         function() {
           const offset = $(this).position();
+          console.log("offset", offset);
+          console.log("originalPos", originalPos);
+          console.log("offset.top - originalPos.top", offset.top - originalPos.top);
           subtitle.css({
             position: "relative",
             top: offset.top - originalPos.top - 2,

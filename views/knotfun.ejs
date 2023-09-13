@@ -9,15 +9,27 @@
     <header><%- include('./partials/header.ejs') %></header>
     <main>
       <h2 class="project-title"><%= projectData.title %></h2>
-      <p>Gameplay video:</p>
       <iframe
-        width="560"
-        height="315"
-        src="<%= projectData.youtubeLink %>"
+        width="1120"
+        height="630"
+        src="<%= projectData.youtubeLink %>?autoplay=1&mute=1&rel=0&modestbranding=1"
         frameborder="0"
         allowfullscreen
       ></iframe>
-    </main>
-    <script src="script.js"></script>
+        <p class="project-description"><%= projectData.description %></p>
+        <!-- app store links -->
+        <div class="app-store-links">
+          <a href="<%= projectData.appStoreLink %>">
+            <img
+              src="/images/app-store-badge.svg"
+              alt="Download on the App Store"
+            />
+          </a>
+          <a href="<%= projectData.playStoreLink %>">
+            <img
+              src="/images/google-play-badge.png"
+              alt="Get it on Google Play"
+            />
+          </a>
   </body>
 </html>
