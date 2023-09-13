@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Knot Fun</title>
+    <%- include('./partials/head.ejs') %>
+  </head>
+  <body>
+    <header><%- include('./partials/header.ejs') %></header>
+    <main>
+      <h2 class="project-title"><%= projectData.title %></h2>
+      <p>Gameplay video:</p>
+      <iframe
+        width="560"
+        height="315"
+        src="<%= projectData.youtubeLink %>"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,42 +1,90 @@
+<div class="full-name">
+  <h1>AS</h1>
+</div>
 <header>
   <div class="left-container">
-    <h1 class="first-name">Adam</h1>
+    <!-- <h1 class="first-name">Adam</h1> -->
     <nav>
-      <ul>
-        <li><a href="/projects/ai">AI</a></li>
-        <li><a href="/projects/games">Games</a></li>
-        <li><a href="/projects/smartcontracts">Smart Contracts</a></li>
-        <li><a href="/projects/art">Art</a></li>
+      <ul class="category-list">
+        <li class="category-link">
+          AI
+          <ul class="subcategory hidden">
+            <li><a href="/projects/ai/stenographerGPT">StenographerGPT</a></li>
+            <li><a href="/projects/ai/mealprepai">Meal Prep AI</a></li>
+          </ul>
+        </li>
+        <li class="category-link">
+          Games
+          <ul class="subcategory hidden">
+            <li><a href="/projects/games/KnotFun">Knot Fun</a></li>
+            <li><a href="/projects/games/JohnnyWoop">Johnny Woop</a></li>
+            <li><a href="/projects/games/GhostHunters">Ghost Hunters</a></li>
+          </ul>
+        </li>
+        <li class="category-link">
+          Smart Contracts
+          <ul class="subcategory hidden">
+            <li><a href="/projects/smartcontracts/chainmail">Chain Mail</a></li>
+          </ul>
+        </li>
+        <li class="category-link">
+          Art
+          <ul class="subcategory hidden">
+            <li><a href="/projects/art/erosionsim">Erosion Simulator</a></li>
+            <li><a href="/projects/art/webgl">webGL stuff</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </div>
   <div class="right-container">
-    <h1 class="last-name">Stockermans</h1>
+    <!-- <h1 class="last-name">Stockermans</h1> -->
     <div class="subtitle-container">
-      <p class="subtitle" id="developerSubtitle">Developer</p>
+      <h2 class="subtitle" id="developerSubtitle">Developer</h2>
     </div>
   </div>
 </header>
+
 <script>
-      $(document).ready(function(){
-        const subtitle = $("#developerSubtitle");
-        const originalPos = subtitle.position();
-        console.log("originalPos", originalPos);
-    $("nav ul li").hover(
-      function() {
-        const offset = $(this).position();
-        console.log("offset", offset);
+    $(document).ready(function(){
+      const subtitle = $("#developerSubtitle");
+      const originalPos = subtitle.position();
+
+      $(".category-link").hover(
+        function() {
+          const offset = $(this).position();
+          subtitle.css({
+            position: "relative",
+            top: offset.top - originalPos.top - 2,
+          });
+        },
+        function() {
+          subtitle.css({
+            top: 0,
+          });
+        }
+      );
+
+    $('.category-link, .subcategory').click(function(){
+      const wasHidden = $(this).find('.subcategory').hasClass('hidden');
+
+      // Hide all subcategories
+      $('.category-link .subcategory').css('max-height', '0').addClass('hidden');
+
+      // If clicked subcategory was originally hidden, show it
+      if (wasHidden) {
+        const actualHeight = $(this).find('.subcategory').get(0).scrollHeight;
+        $(this).find('.subcategory').css('max-height', actualHeight + 'px').removeClass('hidden');
+      }
+      $('.subcategory').on('transitionend', function() {
+        if ($(this).hasClass('hidden')) return;
+
+        const offset = $(this).closest('.category-link').position();
         subtitle.css({
           position: "relative",
-          top: offset.top - originalPos.top - 1,
+          top: offset.top - originalPos.top - 2,
         });
-      },
-      function() {
-        const subtitle = $("#developerSubtitle");
-        subtitle.css({
-          top: 0,
-        });
-      }
-    );
+      });
+    });
   });
 </script>
