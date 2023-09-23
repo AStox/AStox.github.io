@@ -1,0 +1,7 @@
+{
+  "title": "Bad Barber",
+  "description": "A game about giving bad haircuts",
+  "body1": "Built in Unity for the ToJam 2019 game jam. The theme was 'Prepare for disappointment'. I came up with the idea of a barber game because I'm always disappointed with my haircuts when I first get them. In this game, you play a barber giving silly characters even sillier haircuts. You have a limited amount of time to finish the haircut and are graded on how close to the desired haircut you got. Hair was made from a high vertex-count volume and I used vertex manipulation to simulate cutting the hair as the player moused over portions of it with the scissors. To score the player, I'd consider the distance between all of the hair vertices and their desired position.",
+  "image1": "/images/badbarber.png",
+  "link1": "https://adamstox.itch.io/badbarber"
+}

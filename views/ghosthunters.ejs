@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= projectData.title %></title>
+    <%- include('./partials/head.ejs') %>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/stenographerGPT.css" />
+  </head>
+  <body>
+    <header><%- include('./partials/header.ejs') %></header>
+    <main>
+        <h2 class="project-title"><%= projectData.title %></h2>
+        <p class="project-description"><%= projectData.description %></p>
+        <!-- links -->
+        <div class="links">
+          <a href="<%= projectData.link1 %>">CoolMathGames</a>
+        </div>
+        <div class="links">
+            <a href="<%= projectData.link1 %>">Armor Games</a>
+          </div>
+        <image src="<%= projectData.image1 %>" class="image"/>
+        <p class="body"><%= projectData.body1 %></p>
+        <iframe class="gameplay" frameborder="0" allowfullscreen="true" scrolling="no" allowtransparency="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated" mozallowfullscreen="true" msallowfullscreen="true" src="https://v6p9d9t4.ssl.hwcdn.net/html/727607/index.html?v=1542795123" webkitallowfullscreen="true"></iframe>
+  </body>
+</html>

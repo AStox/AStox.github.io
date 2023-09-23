@@ -1,0 +1,6 @@
+{
+  "title": "PalmPong",
+  "description": "A unique entry in the brick breaker genre. Control four paddles at once to keep the ball bouncing, while breaking bricks and accomplishing goals.",
+  "body1": "Built in Unity and written in C#, the unreleased PalmPong was my second game under my company, Happy Square Studio. I wanted to design a casual mobile game that could be played in the pose most people hold their phones—using one hand, with their thumb making all the interactions. From this constraint, PalmPong was born. You control four separate paddles, one on each edge of the screen, using just your thumb. Moving your thumb left and right controls the top and bottom paddles, while moving it up and down controls the left and right paddles. One challenge this style of control introduced was the thumb would often obstruct the player's view of the ball. To solve this, I offset the paddles' movement from the thumb's actual screen position and added a multiplier to the paddles' movement relative to the thumb's. This way, the player could have their thumb in, for example, the bottom right corner of the screen and still maintain full control over the paddles without obstructing their view of the ball.",
+  "youtubeLink": "https://www.youtube.com/embed/hE6qsEtSouU?si=dRGJi4-2qrFUVCTE"
+}

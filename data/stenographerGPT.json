@@ -1,0 +1,7 @@
+{
+  "title": "StenographerGPT",
+  "description": "Zoned out during that important meeting? Let StenographerGPT record and transcribe your meetings for you, and remind you what you missed!",
+  "body1": "StenographerGPT is a tool that uses GPT to record and transcribe meetings, interviews, or any other audio. Built in python ontop of OpenAI APIs, StenographerGPT listens to your computer audio during meetings, transcribes the audio, and then uses OpenAI's GPT-3.5 to summarize the meeting for you and answer any questions you may have missed.",
+  "image1": "/images/stenographerGPT.png",
+  "link1": "https://github.com/AStox/StenographerGPT"
+}

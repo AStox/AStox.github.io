@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 // New Route for projects
-app.get("/projects/games/:projectTitle", (req, res) => {
+app.get("/projects/:category/:projectTitle", (req, res) => {
   const projectTitle = req.params.projectTitle;
   const projectData = require(`./data/${projectTitle}.json`);
   res.render(projectTitle, { projectData });

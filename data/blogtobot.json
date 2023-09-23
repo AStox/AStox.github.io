@@ -1,0 +1,8 @@
+{
+  "title": "BlogTO Bot",
+  "description": "BlogTO Bot was a twitter bot designed to solve the problem of click bait articles from the Toronto focused digital media and news company, BlogTO",
+  "body1": "During the spring of 2023 I became fed up with BlogTO's blatant click bait articles. BlogTO does post interesting and useful content sometimes but it's always hidden behind clickbait titles in their tweets. I wrote a js twitter bot to scrape their tweets, read the article it linked out to, and reply to the tweet with a summary of the article. This way I could get the important information without having to waste 2 whole seconds clicking through. I used the puppeteer to scrape twitter, disguising BlogTO Bot as a google web indexing bot. I attempted to host it on AWS Lambda Functions, and GCP Cloud Functions, but puppeteer needs a browser installed, which exceeds the memory limits of these serverless compute functions. I ran this bot for about 2 months before Twitter blocked my scrapping strategy. The bot no longer runs because of this, but the code can be viewed on my github, and past tweets can be viewed on the twitter account.",
+  "image1": "/images/blogbot.png",
+  "link1": "https://github.com/AStox/BlogTOBot",
+  "link2": "https://twitter.com/nomoreclickbait/with_replies"
+}

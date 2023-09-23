@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= projectData.title %></title>
+    <%- include('./partials/head.ejs') %>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/stenographerGPT.css" />
+  </head>
+  <body>
+    <header><%- include('./partials/header.ejs') %></header>
+    <main>
+        <h2 class="project-title"><%= projectData.title %></h2>
+        <p class="project-description"><%= projectData.description %></p>
+        <!-- links -->
+        <div class="links">
+          <a href="<%= projectData.link1 %>">Github</a>
+        </div>
+        <image src="<%= projectData.image1 %>" class="image"/>
+        <p class="body"><%= projectData.body1 %></p>
+  </body>
+</html>
