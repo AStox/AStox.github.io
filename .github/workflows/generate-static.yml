@@ -24,6 +24,9 @@ jobs:
       - name: Generate Static HTML
         run: node generate-html.js
 
+      - name: List Generated Files
+        run: ls -R public
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
