@@ -9,7 +9,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("home"); // index.ejs should be in your 'views' folder
+  res.render("index"); // index.ejs should be in your 'views' folder
 });
 
 // New Route for projects
