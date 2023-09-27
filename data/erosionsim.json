@@ -1,0 +1,8 @@
+{
+  "title": "Erosion Simulator",
+  "description": "A WebGL-based erosion simulator",
+  "body1": "I originally started working on this erosion simulator to generate world maps for a game idea I had, but it quickly spiraled out of control and became its own project. I create a black and white heightmap using a perlin noise shader, then in another fragment shader I simulate thousands of droplets of water spawning at random points and running down hill. The erosion and sedimentation is based on the water droplets lifespan and speed. This erosion and sedimentation is fed back into the heightmap which is updated for the next frame. The result is a very realistic erosion simulation that can be used to generate realistic looking terrain.",
+  "image1": "/images/erosionsim1.jpeg",
+  "image2": "/images/erosionsim2.jpeg",
+  "link1": "https://github.com/AStox/onlive/tree/webgl"
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Chain Mail",
+  "description": "A dirt cheap ERC-721 based wallet-to-wallet messenger",
+  "body1": "Chain Mail is an artistic messenger service for ethereum that allows users to send each other NFT messages, and reply to a message by burning the NFT. Now, you might be thinking that minting an NFT is already expensive enough, let alone saving strings of undefined length to contract storage! Well by cleverly using events to 'store' all its data, and a block indexer (subgraph) to dynamically generate the SVG that is the NFT, I was able to cut minting costs down to just pennies. Responding to a message by burning the previous is even cheaper, since the process re-uses the same storage slots instead of re-initializing new ones.",
+  "body2": "Unfortunately for this project, there is no great way to alert someone that they've recieved a message, as every NFT marketplace where you might browse your own gallery of NFTS is flooded with scam airdropped NFTs, and aggressively filter out any NFTs that weren't minted by the owner of the NFT. This means any Chain Mail you send will probably never be seen unless you alert the recipient by some other means, but it was a great exercise in SVG art and aggressive gas optimization for smart contracts.",
+  "image1": "/images/chainmail.png",
+  "link1": "https://onchainmail.netlify.app/",
+  "link2": "https://etherscan.io/address/0x3d7e5ee442051b6b4536ee09613cc913b4cfc943",
+  "link3": "https://github.com/AStox/ChainMail/tree/master"
+}

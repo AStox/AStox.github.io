@@ -4,7 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js & browser-sync start --proxy 'localhost:3000' --files 'public/**/*, views/**/*'",
+    "clean": "rm -rf ./public/*.html ./public/projects",
+    "generate": "node generate-html.js",
+    "serve": "http-server ./public",
+    "start": "yarn clean && yarn generate && yarn serve",
+    "start-server": "nodemon server.js & browser-sync start --proxy 'localhost:3000' --files 'public/**/*, views/**/*'",
     "browser-sync": "browser-sync start --proxy 'localhost:3000' --files 'public/**/*, views/**/*'"
   },
   "keywords": [],
@@ -16,6 +20,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",
+    "http-server": "^14.1.1",
     "nodemon": "^3.0.1"
   }
 }

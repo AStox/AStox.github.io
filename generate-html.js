@@ -1,35 +1,50 @@
 // generate-html.js
-
-const fs = require("fs");
 const ejs = require("ejs");
+const fs = require("fs");
 const path = require("path");
 
-function createFolderStructure(directory, filename) {
-  const folderPath = path.join("public", directory);
-  if (!fs.existsSync(folderPath)) {
-    fs.mkdirSync(folderPath, { recursive: true });
-  }
-  const htmlFilePath = path.join(folderPath, "index.html");
-  return htmlFilePath;
+const viewsDir = path.join(__dirname, "views");
+const outputDir = path.join(__dirname, "public");
+
+function generateHTML(dir, outputPath = "") {
+  const items = fs.readdirSync(dir);
+
+  items.forEach((item) => {
+    const fullItemPath = path.join(dir, item);
+    const stat = fs.statSync(fullItemPath);
+
+    if (stat.isDirectory()) {
+      if (item !== "partials") {
+        generateHTML(fullItemPath, `${outputPath}/${item}`);
+      }
+    } else if (stat.isFile() && path.extname(item) === ".ejs") {
+      const nameWithoutExtension = path.basename(item, ".ejs");
+      let projectData = null;
+
+      try {
+        projectData = require(`./data/${nameWithoutExtension}.json`);
+      } catch (err) {
+        projectData = {};
+      }
+
+      ejs.renderFile(fullItemPath, { projectData }, (err, str) => {
+        if (err) {
+          console.error(`Error in rendering EJS to HTML: ${err}`);
+          return;
+        }
+
+        const targetFolder =
+          nameWithoutExtension === "index"
+            ? outputDir
+            : path.join(outputDir, `${outputPath}/${nameWithoutExtension}`);
+        const finalOutputPath = path.join(targetFolder, "index.html");
+
+        fs.mkdirSync(targetFolder, { recursive: true });
+        fs.writeFileSync(finalOutputPath, str);
+        console.log(`Generated ${finalOutputPath}`);
+      });
+    }
+  });
 }
 
-fs.readdir("views", (err, files) => {
-  if (err) return console.error(err);
-
-  files.forEach((file) => {
-    if (file === "partials" || path.extname(file) !== ".ejs") return;
-
-    const ejsFilePath = path.join(__dirname, "views", file);
-    const directory = file.replace(".ejs", "");
-    const htmlFilePath = createFolderStructure(directory, file);
-
-    const projectData = fs.existsSync(`./data/${directory}.json`)
-      ? require(`./data/${directory}.json`)
-      : {};
-
-    ejs.renderFile(ejsFilePath, { projectData }, {}, (err, str) => {
-      if (err) return console.error(err);
-      fs.writeFileSync(htmlFilePath, str);
-    });
-  });
-});
+generateHTML(viewsDir);

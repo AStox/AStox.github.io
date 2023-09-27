@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= projectData.title %></title>
+    <%- include('../../partials/head.ejs') %>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/stenographerGPT.css" />
+  </head>
+  <body>
+    <header><%- include('../../partials/header.ejs') %></header>
+    <main>
+        <h2 class="project-title"><%= projectData.title %></h2>
+        <p class="project-description"><%= projectData.description %></p>
+        <!-- links -->
+        <p class="body"><%= projectData.body4 %></p>
+        <div class="images">
+            <div class="image-box"><image src="<%= projectData.image7 %>" alt="SVG art" /></div>
+        </div>
+        <p class="body"><%= projectData.body1 %></p>
+        <div class="images">
+            <div class="image-box"><image src="<%= projectData.image1 %>" alt="SVG art" /></div>
+            <div class="image-box"><image src="<%= projectData.image2 %>" alt="SVG art" /></div>
+            <div class="image-box"><image src="<%= projectData.image3 %>" alt="SVG art" /></div>
+            <div class="image-box"><image src="<%= projectData.image4 %>" alt="SVG art" /></div>
+        </div>
+        <p class="body"><%= projectData.body2 %></p>
+        <div class="images">
+            <div class="image-box"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Updated the visuals of <a href="https://twitter.com/itscodeinhere?ref_src=twsrc%5Etfw">@itscodeinhere</a> to resemble something you might find on a coding blog.<br> <a href="https://twitter.com/hashtag/onchain?src=hash&amp;ref_src=twsrc%5Etfw">#onchain</a> <a href="https://twitter.com/hashtag/NFT?src=hash&amp;ref_src=twsrc%5Etfw">#NFT</a> <a href="https://t.co/KO6WxzsIHG">pic.twitter.com/KO6WxzsIHG</a></p>&mdash; Adam Stox (@stoxophone) <a href="https://twitter.com/stoxophone/status/1461186411432919046?ref_src=twsrc%5Etfw">November 18, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        </div>
+        <p class="body"><%= projectData.body3 %></p>
+        <div class="images">
+            <div class="image-box"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hand-coded SVG fresh out the oven. Weighing in at 6kb!<a href="https://t.co/hWzQnB8M0g">https://t.co/hWzQnB8M0g</a> <a href="https://t.co/YAbDtzQQMi">https://t.co/YAbDtzQQMi</a> <a href="https://t.co/l2W9zjThXz">pic.twitter.com/l2W9zjThXz</a></p>&mdash; Adam Stox (@stoxophone) <a href="https://twitter.com/stoxophone/status/1454152061868814339?ref_src=twsrc%5Etfw">October 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        </div>
+  </body>
+</html>
