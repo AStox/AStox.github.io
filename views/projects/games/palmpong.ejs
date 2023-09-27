@@ -2,23 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title><%= projectData.title %></title>
-    <%- include('../partials/head.ejs') %>
+    <title>Knot Fun</title>
+    <%- include('../../partials/head.ejs') %>
     <link
-    href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="/css/stenographerGPT.css" />
   </head>
   <body>
-    <header><%- include('../partials/header.ejs') %></header>
+    <header><%- include('../../partials/header.ejs') %></header>
     <main>
         <h2 class="project-title"><%= projectData.title %></h2>
         <p class="project-description"><%= projectData.description %></p>
-        <!-- links -->
-        <div class="links">
-          <a href="<%= projectData.link1 %>">Github</a>
-        </div>
         <iframe
           width="1120"
           height="630"
@@ -26,6 +21,6 @@
           frameborder="0"
           allowfullscreen
         ></iframe>
-        <p class="body"><%= projectData.body1 %></p>
+        <p><%= projectData.body1 %></p>
   </body>
 </html>
