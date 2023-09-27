@@ -6,34 +6,42 @@ const path = require("path");
 const viewsDir = path.join(__dirname, "views");
 const outputDir = path.join(__dirname, "public");
 
-const viewFiles = fs.readdirSync(viewsDir);
+function generateHTML(dir, outputPath = "") {
+  const items = fs.readdirSync(dir);
 
-viewFiles.forEach((file) => {
-  const nameWithoutExtension = path.basename(file, ".ejs");
-  const filePath = path.join(viewsDir, file);
+  items.forEach((item) => {
+    const fullItemPath = path.join(dir, item);
+    const stat = fs.statSync(fullItemPath);
 
-  let projectData = null;
-  try {
-    projectData = require(`./data/${nameWithoutExtension}.json`);
-  } catch (err) {
-    // No JSON file exists for this EJS template, set projectData as empty object
-    projectData = {};
-  }
+    if (stat.isDirectory()) {
+      if (item !== "partials") {
+        generateHTML(fullItemPath, `${outputPath}/${item}`);
+      }
+    } else if (stat.isFile() && path.extname(item) === ".ejs") {
+      const nameWithoutExtension = path.basename(item, ".ejs");
+      let projectData = null;
 
-  ejs.renderFile(filePath, { projectData }, (err, str) => {
-    if (err) {
-      console.error(`Error in rendering EJS to HTML: ${err}`);
-      return;
+      try {
+        projectData = require(`./data/${nameWithoutExtension}.json`);
+      } catch (err) {
+        projectData = {};
+      }
+
+      ejs.renderFile(fullItemPath, { projectData }, (err, str) => {
+        if (err) {
+          console.error(`Error in rendering EJS to HTML: ${err}`);
+          return;
+        }
+
+        const finalOutputPath = path.join(outputDir, `${outputPath}/${nameWithoutExtension}.html`);
+        const dirToCreate = path.dirname(finalOutputPath);
+
+        fs.mkdirSync(dirToCreate, { recursive: true });
+        fs.writeFileSync(finalOutputPath, str);
+        console.log(`Generated ${finalOutputPath}`);
+      });
     }
-
-    let folderName = "games"; // Or dynamically determine this
-    const outputFolder = path.join(outputDir, folderName, nameWithoutExtension);
-    if (!fs.existsSync(outputFolder)) {
-      fs.mkdirSync(outputFolder, { recursive: true });
-    }
-    const outputFile = path.join(outputFolder, "index.html");
-
-    fs.writeFileSync(outputFile, str);
-    console.log(`Generated ${outputFile}`);
   });
-});
+}
+
+generateHTML(viewsDir);

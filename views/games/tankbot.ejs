@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title><%= projectData.title %></title>
-    <%- include('./partials/head.ejs') %>
+    <%- include('../partials/head.ejs') %>
     <link
     href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&display=swap"
     rel="stylesheet"
@@ -11,10 +11,16 @@
   <link rel="stylesheet" href="/css/stenographerGPT.css" />
   </head>
   <body>
-    <header><%- include('./partials/header.ejs') %></header>
+    <header><%- include('../partials/header.ejs') %></header>
     <main>
         <h2 class="project-title"><%= projectData.title %></h2>
+        <iframe
+          width="100%"
+          height="500vw"
+          src="<%= projectData.youtubeLink %>?autoplay=1&muted=1&outro=none"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
         <p class="project-description"><%= projectData.description %></p>
-        <p class="body"><%= projectData.body1 %></p>
   </body>
 </html>
