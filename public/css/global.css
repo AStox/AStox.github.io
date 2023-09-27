@@ -88,10 +88,11 @@ h1 {
 }
 
 h2 {
-  font-size: 14em;
+  font-size: 10em;
   font-family: var(--bagel);
   font-weight: 400;
   margin: 0;
+  text-align: center;
 }
 
 main {
@@ -149,10 +150,23 @@ footer p {
   color: #ccc;
 } */
 
-.image {
-  max-width: 70%;
-  padding: 2rem;
-  max-height: 40vh;
+.body {
+  padding-top: 3em;
+}
+
+.images {
+  padding: 0.5em 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-box {
+  flex: 50%;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
 }
 
 .video {
