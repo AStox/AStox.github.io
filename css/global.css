@@ -33,14 +33,15 @@ header {
 }
 
 .right-container {
-  justify-content: top;
-  position: relative;
-  padding: 1em 5px;
+  position: absolute;
 }
 
 .left-container {
-  justify-content: top;
   padding: 1.3em 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .right-container,
@@ -100,11 +101,13 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 calc(max(10%, 1em));
+  padding: 0;
+  padding-left: calc(220px + 10%);
+  padding-right: 10%;
 }
 
 .initials {
-  /* padding: 2em; */
+  padding: 0 0 0 2em;
   /* flex: 1 0; */
   margin: 0;
   color: var(--title-color);

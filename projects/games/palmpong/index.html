@@ -74,77 +74,83 @@
   />
   </head>
   <body>
-    <header><div class="initials">
-  <h1>AS</h1>
+    <header><div class="left-container">
+  <div class="initials">
+    <h1>AS</h1>
+  </div>
+  <nav>
+    <ul class="category-list">
+      <li class="category-link">
+        AI
+        <ul class="subcategory hidden">
+          <li><a href="/projects/ai/stenographergpt">StenographerGPT</a></li>
+          <li><a href="/projects/ai/mealprepai">Meal Prep AI</a></li>
+          <li><a href="/projects/ai/blogtobot">BlogTO Bot</a></li>
+        </ul>
+      </li>
+      <li class="category-link">
+        Games
+        <ul class="subcategory hidden">
+          <li><a href="/projects/games/knotfun">Knot Fun</a></li>
+          <li><a href="/projects/games/palmpong">Palm Pong</a></li>
+          <li><a href="/projects/games/johnnywoop">Johnny Woop</a></li>
+          <li><a href="/projects/games/ghosthunters">Ghost Hunters</a></li>
+          <li><a href="/projects/games/pbjpuzzler">PB&J Puzzler</a></li>
+          <li><a href="/projects/games/badbarber">Bad Barber</a></li>
+          <li><a href="/projects/games/tankbot">Tank Bot</a></li>
+        </ul>
+      </li>
+      <li class="category-link">
+        Smart Contracts
+        <ul class="subcategory hidden">
+          <li><a href="/projects/smartcontracts/chainmail">Chain Mail</a></li>
+        </ul>
+      </li>
+      <li class="category-link">
+        Art
+        <ul class="subcategory hidden">
+          <li><a href="/projects/art/erosionsim">Erosion Simulator</a></li>
+          <li><a href="/projects/art/webgl">webGL stuff</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 </div>
-<header>
-  <div class="left-container">
-    <!-- <h1 class="first-name">Adam</h1> -->
-    <nav>
-      <ul class="category-list">
-        <li class="category-link">
-          AI
-          <ul class="subcategory hidden">
-            <li><a href="/projects/ai/stenographergpt">StenographerGPT</a></li>
-            <li><a href="/projects/ai/mealprepai">Meal Prep AI</a></li>
-            <li><a href="/projects/ai/blogtobot">BlogTO Bot</a></li>
-          </ul>
-        </li>
-        <li class="category-link">
-          Games
-          <ul class="subcategory hidden">
-            <li><a href="/projects/games/knotfun">Knot Fun</a></li>
-            <li><a href="/projects/games/palmpong">Palm Pong</a></li>
-            <li><a href="/projects/games/johnnywoop">Johnny Woop</a></li>
-            <li><a href="/projects/games/ghosthunters">Ghost Hunters</a></li>
-            <li><a href="/projects/games/pbjpuzzler">PB&J Puzzler</a></li>
-            <li><a href="/projects/games/badbarber">Bad Barber</a></li>
-            <li><a href="/projects/games/tankbot">Tank Bot</a></li>
-          </ul>
-        </li>
-        <li class="category-link">
-          Smart Contracts
-          <ul class="subcategory hidden">
-            <li><a href="/projects/smartcontracts/chainmail">Chain Mail</a></li>
-          </ul>
-        </li>
-        <li class="category-link">
-          Art
-          <ul class="subcategory hidden">
-            <li><a href="/projects/art/erosionsim">Erosion Simulator</a></li>
-            <li><a href="/projects/art/webgl">webGL stuff</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+<div class="right-container">
+  <!-- <h1 class="last-name">Stockermans</h1> -->
+  <div class="subtitle-container">
+    <h2 class="subtitle" id="developerSubtitle">Developer</h2>
   </div>
-  <div class="right-container">
-    <!-- <h1 class="last-name">Stockermans</h1> -->
-    <div class="subtitle-container">
-      <h2 class="subtitle" id="developerSubtitle">Developer</h2>
-    </div>
-  </div>
-</header>
+</div>
 
 <script>
     $(document).ready(function(){
       const subtitle = $("#developerSubtitle");
       const originalPos = subtitle.position();
+      const leftContainer = $(".left-container").width();
+      const initialsDiv = $(".initials");
+      const initialsBottom = initialsDiv.position().top + initialsDiv.height();
+      const initialsCenter = initialsDiv.position().left + initialsDiv.width() / 2;
+
+      // Set initial position of subtitle
+      subtitle.css({
+        top: initialsBottom - originalPos.top,
+        left: initialsCenter - (subtitle.width() / 2) + 13,
+      });
+
 
       $(".category-link").hover(
         function() {
           const offset = $(this).position();
-          console.log("offset", offset);
-          console.log("originalPos", originalPos);
-          console.log("offset.top - originalPos.top", offset.top - originalPos.top);
           subtitle.css({
-            position: "relative",
-            top: offset.top - originalPos.top - 2,
+            top: offset.top,
+            left: leftContainer - 10
           });
         },
         function() {
           subtitle.css({
-            top: 0,
+            top: initialsBottom - originalPos.top,
+            left: initialsCenter - (subtitle.width() / 2) + 13,
           });
         }
       );
@@ -164,10 +170,10 @@
         if ($(this).hasClass('hidden')) return;
 
         const offset = $(this).closest('.category-link').position();
-        subtitle.css({
-          position: "relative",
-          top: offset.top - originalPos.top - 2,
-        });
+        // subtitle.css({
+        //   // position: "relative",
+        //   top: offset.top - originalPos.top - 1,
+        // });
       });
     });
   });
