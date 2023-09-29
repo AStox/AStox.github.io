@@ -59,7 +59,7 @@
     }
   </script>
   <script>
-    $(window).on('load', function() {
+    $(document).ready(function() {
         const subtitle = $("#developerSubtitle");
         const originalPos = subtitle.position();
         const leftContainer = $(".left-container").width();
@@ -74,7 +74,12 @@
               left: offset.left - originalPos.left + initialsDiv.width() + 10,
             });
           },
-          function() {}
+          function() {
+            subtitle.css({
+              top: 0,
+              left: 0,
+            });
+          }
         );
 
       $('.category-link, .subcategory').click(function(){
