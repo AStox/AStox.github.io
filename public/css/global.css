@@ -17,14 +17,16 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
+  display: flex;
+  flex-direction: row;
   /* color: #333; */
 }
 
 header {
-  display: flex;
+  /* display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  padding: 0 2%;
+  padding: 0 2%; */
 }
 
 .empty-container {
@@ -33,12 +35,12 @@ header {
 }
 
 .right-container {
-  position: absolute;
+  /* position: absolute; */
 }
 
 .left-container {
   padding: 1.3em 5px;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   z-index: 100;
@@ -106,9 +108,14 @@ main {
   padding-right: 10%;
 }
 
-.initials {
+.initials-container {
+  display: flex;
+  flex-direction: column;
   padding: 0 0 0 2em;
-  /* flex: 1 0; */
+}
+
+.initials {
+  flex: 1 1;
   margin: 0;
   color: var(--title-color);
   text-align: center;
@@ -122,13 +129,21 @@ main {
   text-align: left;
 }
 
-.subtitle {
-  transition: all 0.1s ease;
-  position: absolute;
-  color: var(--title-color);
+.subtitle-container {
+  flex: 1 1;
+  pointer-events: none;
 }
 
-.subtitle,
+.subtitle {
+  transition: all 0.1s ease;
+  position: relative;
+  color: var(--title-color);
+  font-size: 18px;
+  margin: 0;
+  margin-top: -1rem;
+  text-align: center;
+}
+
 li {
   font-size: 18px;
   /* margin: 5px 0; */

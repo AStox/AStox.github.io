@@ -58,6 +58,48 @@
       ]
     }
   </script>
+  <script>
+    $(window).on('load', function() {
+        const subtitle = $("#developerSubtitle");
+        const originalPos = subtitle.position();
+        const leftContainer = $(".left-container").width();
+        const initialsDiv = $(".initials");
+
+
+        $(".category-link").hover(
+          function() {
+            const offset = $(this).position();
+            subtitle.css({
+              top: offset.top - initialsDiv.height() - 5,
+              left: offset.left - originalPos.left + initialsDiv.width() + 10,
+            });
+          },
+          function() {}
+        );
+
+      $('.category-link, .subcategory').click(function(){
+        const wasHidden = $(this).find('.subcategory').hasClass('hidden');
+
+        // Hide all subcategories
+        $('.category-link .subcategory').css('max-height', '0').addClass('hidden');
+
+        // If clicked subcategory was originally hidden, show it
+        if (wasHidden) {
+          const actualHeight = $(this).find('.subcategory').get(0).scrollHeight;
+          $(this).find('.subcategory').css('max-height', actualHeight + 'px').removeClass('hidden');
+        }
+        $('.subcategory').on('transitionend', function() {
+          if ($(this).hasClass('hidden')) return;
+
+          const offset = $(this).closest('.category-link').position();
+          // subtitle.css({
+          //   // position: "relative",
+          //   top: offset.top - originalPos.top - 1,
+          // });
+        });
+      });
+    });
+  </script>
 
   <!-- Optional: Google Verification if you're using Google Search Console -->
   <!-- <meta name="google-site-verification" content="your-google-verification-code" /> -->
