@@ -17,14 +17,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
-  /* color: #333; */
-}
-
-header {
   display: flex;
-  justify-content: flex-start;
   flex-direction: row;
-  padding: 0 2%;
+  /* color: #333; */
 }
 
 .empty-container {
@@ -32,13 +27,8 @@ header {
   flex: 1 0;
 }
 
-.right-container {
-  position: absolute;
-}
-
 .left-container {
   padding: 1.3em 5px;
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
@@ -66,7 +56,6 @@ header {
   list-style: none;
   text-align: right;
   width: 12rem;
-  /* position: relative; */
   max-height: 0;
   overflow: hidden;
   margin-right: -2em;
@@ -106,9 +95,14 @@ main {
   padding-right: 10%;
 }
 
-.initials {
+.initials-container {
+  display: flex;
+  flex-direction: column;
   padding: 0 0 0 2em;
-  /* flex: 1 0; */
+}
+
+.initials {
+  flex: 1 1;
   margin: 0;
   color: var(--title-color);
   text-align: center;
@@ -122,13 +116,21 @@ main {
   text-align: left;
 }
 
-.subtitle {
-  transition: all 0.1s ease;
-  position: absolute;
-  color: var(--title-color);
+.subtitle-container {
+  flex: 1 1;
+  pointer-events: none;
 }
 
-.subtitle,
+.subtitle {
+  transition: all 0.1s ease;
+  position: relative;
+  color: var(--title-color);
+  font-size: 18px;
+  margin: 0;
+  margin-top: -1rem;
+  text-align: center;
+}
+
 li {
   font-size: 18px;
   /* margin: 5px 0; */
@@ -139,19 +141,6 @@ a {
   color: var(--menu1-color);
   padding: 2px 0;
 }
-
-/* Footer styles */
-/* footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #324376;
-  text-align: center;
-}
-
-footer p {
-  color: #ccc;
-} */
 
 .body {
   padding-top: 3em;

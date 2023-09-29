@@ -63,6 +63,44 @@
       ]
     }
   </script>
+  <script>
+    $(document).ready(function() {
+        const subtitle = $("#developerSubtitle");
+        const originalPos = subtitle.position();
+        const leftContainer = $(".left-container").width();
+        const initialsDiv = $(".initials");
+
+
+        $(".category-link").hover(
+          function() {
+            const offset = $(this).position();
+            subtitle.css({
+              top: offset.top,
+              left: offset.left,
+            });
+          },
+          function() {
+            subtitle.css({
+              top: 0,
+              left: 0,
+            });
+          }
+        );
+
+      $('.category-link, .subcategory').click(function(){
+        const wasHidden = $(this).find('.subcategory').hasClass('hidden');
+
+        // Hide all subcategories
+        $('.category-link .subcategory').css('max-height', '0').addClass('hidden');
+
+        // If clicked subcategory was originally hidden, show it
+        if (wasHidden) {
+          const actualHeight = $(this).find('.subcategory').get(0).scrollHeight;
+          $(this).find('.subcategory').css('max-height', actualHeight + 'px').removeClass('hidden');
+        }
+      });
+    });
+  </script>
 
   <!-- Optional: Google Verification if you're using Google Search Console -->
   <!-- <meta name="google-site-verification" content="your-google-verification-code" /> -->
@@ -74,9 +112,14 @@
   />
   </head>
   <body>
-    <header><div class="left-container">
-  <div class="initials">
-    <h1>AS</h1>
+    <header><header class="left-container">
+  <div class="initials-container">
+    <div class="initials">
+      <h1>AS</h1>
+    </div>
+    <div class="subtitle-container">
+      <div class="subtitle" id="developerSubtitle">Developer</div>
+    </div>
   </div>
   <nav>
     <ul class="category-list">
@@ -115,69 +158,7 @@
       </li>
     </ul>
   </nav>
-</div>
-<div class="right-container">
-  <!-- <h1 class="last-name">Stockermans</h1> -->
-  <div class="subtitle-container">
-    <h2 class="subtitle" id="developerSubtitle">Developer</h2>
-  </div>
-</div>
-
-<script>
-    $(document).ready(function(){
-      const subtitle = $("#developerSubtitle");
-      const originalPos = subtitle.position();
-      const leftContainer = $(".left-container").width();
-      const initialsDiv = $(".initials");
-      const initialsBottom = initialsDiv.position().top + initialsDiv.height();
-      const initialsCenter = initialsDiv.position().left + initialsDiv.width() / 2;
-
-      // Set initial position of subtitle
-      subtitle.css({
-        top: initialsBottom - originalPos.top,
-        left: initialsCenter - (subtitle.width() / 2) + 13,
-      });
-
-
-      $(".category-link").hover(
-        function() {
-          const offset = $(this).position();
-          subtitle.css({
-            top: offset.top,
-            left: leftContainer - 10
-          });
-        },
-        function() {
-          subtitle.css({
-            top: initialsBottom - originalPos.top,
-            left: initialsCenter - (subtitle.width() / 2) + 13,
-          });
-        }
-      );
-
-    $('.category-link, .subcategory').click(function(){
-      const wasHidden = $(this).find('.subcategory').hasClass('hidden');
-
-      // Hide all subcategories
-      $('.category-link .subcategory').css('max-height', '0').addClass('hidden');
-
-      // If clicked subcategory was originally hidden, show it
-      if (wasHidden) {
-        const actualHeight = $(this).find('.subcategory').get(0).scrollHeight;
-        $(this).find('.subcategory').css('max-height', actualHeight + 'px').removeClass('hidden');
-      }
-      $('.subcategory').on('transitionend', function() {
-        if ($(this).hasClass('hidden')) return;
-
-        const offset = $(this).closest('.category-link').position();
-        // subtitle.css({
-        //   // position: "relative",
-        //   top: offset.top - originalPos.top - 1,
-        // });
-      });
-    });
-  });
-</script>
+</header>
 </header>
     <main>
         <h2 class="project-title">PalmPong</h2>
