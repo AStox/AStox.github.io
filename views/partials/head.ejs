@@ -70,8 +70,8 @@
           function() {
             const offset = $(this).position();
             subtitle.css({
-              top: offset.top - initialsDiv.height() - 5,
-              left: offset.left - originalPos.left + initialsDiv.width() + 10,
+              top: offset.top,
+              left: offset.left,
             });
           },
           function() {}
@@ -88,15 +88,6 @@
           const actualHeight = $(this).find('.subcategory').get(0).scrollHeight;
           $(this).find('.subcategory').css('max-height', actualHeight + 'px').removeClass('hidden');
         }
-        $('.subcategory').on('transitionend', function() {
-          if ($(this).hasClass('hidden')) return;
-
-          const offset = $(this).closest('.category-link').position();
-          // subtitle.css({
-          //   // position: "relative",
-          //   top: offset.top - originalPos.top - 1,
-          // });
-        });
       });
     });
   </script>
