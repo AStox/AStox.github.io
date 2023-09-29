@@ -22,6 +22,10 @@ body {
   /* color: #333; */
 }
 
+header {
+  z-index: 100;
+}
+
 .empty-container {
   display: flex;
   flex: 1 0;
