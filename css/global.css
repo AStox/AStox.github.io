@@ -22,13 +22,12 @@ body {
   /* color: #333; */
 }
 
-header {
-  z-index: 100;
+p {
+  font-family: "Roboto", sans-serif;
 }
 
-.empty-container {
-  display: flex;
-  flex: 1 0;
+header {
+  z-index: 100;
 }
 
 .left-container {
@@ -49,27 +48,27 @@ header {
   text-align: right;
   margin: 0;
   padding: 0;
-  width: 12rem;
+  /* width: 12rem; */
+  white-space: nowrap;
   cursor: pointer;
   color: var(--menu1-color);
 }
 
 .subcategory {
-  padding-left: 0;
   padding: 0 0;
   list-style: none;
   text-align: right;
-  width: 12rem;
   max-height: 0;
   overflow: hidden;
   margin-right: -2em;
-  transition: max-height 0.15s ease-in-out, padding 0.15s ease-in-out;
-
-  /* transition-delay: 1.1s; */
+  transition: max-height 0.15s ease-in-out, left 0.15s ease-in-out, padding 0.15s ease-in-out;
+  left: 0;
+  position: relative;
 }
 
 .subcategory:not(.hidden) {
-  padding: 1em 0 1em 3em;
+  padding: 1em 0;
+  left: 50px;
 }
 
 h1 {
@@ -89,13 +88,18 @@ h2 {
   text-align: center;
 }
 
+.project-title {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0;
-  padding-left: calc(220px + 10%);
+  padding-left: calc(20px + 10%);
   padding-right: 10%;
 }
 
@@ -129,15 +133,11 @@ main {
   transition: all 0.1s ease;
   position: relative;
   color: var(--title-color);
-  font-size: 18px;
+  font-size: 1rem;
   margin: 0;
   margin-top: -1rem;
+  margin-left: 15px;
   text-align: center;
-}
-
-li {
-  font-size: 18px;
-  /* margin: 5px 0; */
 }
 
 a {
@@ -179,7 +179,76 @@ a {
   padding: 0;
 }
 
+.links a {
+  padding: 4px 8px; /* Adjust as needed */
+}
+
 .gameplay {
   width: 100%;
   height: 50vh;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 5em;
+  }
+
+  .left-container {
+    flex-direction: row;
+  }
+
+  .initials-container {
+    padding: 0;
+  }
+
+  nav {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .category-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    max-height: 1rem;
+  }
+
+  .subcategory {
+    text-align: left;
+    margin-right: 0;
+  }
+
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .image-box {
+    flex: 100%;
+  }
+
+  .video {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .gameplay {
+    height: 30vh;
+  }
+
+  .subtitle {
+    display: none;
+    font-size: 0.8rem;
+    margin-top: -0.8rem;
+  }
 }
