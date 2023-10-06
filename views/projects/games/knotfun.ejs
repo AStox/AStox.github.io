@@ -13,6 +13,7 @@
     <header><%- include('../../partials/header.ejs') %></header>
     <main>
         <h2 class="project-title"><%= projectData.title %></h2>
+        <p class="project-description"><%= projectData.description %></p>
         <iframe
           width="1120"
           height="630"
@@ -20,7 +21,7 @@
           frameborder="0"
           allowfullscreen
         ></iframe>
-        <p class="project-description"><%= projectData.description %></p>
+        <p class="body"><%= projectData.body1 %></p>
         <!-- app store links -->
         <div class="links">
           <a href="<%= projectData.appStoreLink %>">

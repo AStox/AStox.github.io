@@ -1,18 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.adamstockermans.com/</loc>
+    <loc>https://adamstockermans.com/</loc>
   </url>
   <url>
-    <loc>http://www.adamstockermans.com/projects/ai</loc>
+    <loc>https://adamstockermans.com/projects/ai/stenographergpt</loc>
   </url>
   <url>
-    <loc>http://www.adamstockermans.com/projects/games</loc>
+    <loc>https://adamstockermans.com/projects/ai/mealprepai</loc>
   </url>
   <url>
-    <loc>http://www.adamstockermans.com/projects/smartcontracts</loc>
+    <loc>https://adamstockermans.com/projects/ai/blogtobot</loc>
   </url>
   <url>
-    <loc>http://www.adamstockermans.com/projects/art</loc>
+    <loc>https://adamstockermans.com/projects/games/knotfun</loc>
+  </url>
+  <url>
+    <loc>https://adamstockermans.com/projects/games/palmpong</loc>
+  </url>
+  <url>
+    <loc>https://adamstockermans.com/projects/games/johnnywoop</loc>
+  </url>
+  <url>
+    <loc>https://adamstockermans.com/projects/games/ghosthunters</loc>
+  </url>
+  <url>
+    <loc>https://adamstockermans.com/projects/games/pbjpuzzler</loc>
+  </url>
+  <url>
+    <loc>https://adamstockermans.com/projects/games/badbarber</loc>
+  </url>
+  <url>
+    <loc>https://adamstockermans.com/projects/games/tankbot</loc>
+  </url>
+  <url>
+    <loc>https://adamstockermans.com/projects/smartcontracts/chainmail</loc>
+  </url>
+  <url>
+    <loc>https://adamstockermans.com/projects/art/erosionsim</loc>
+  </url>
+  <url>
+    <loc>https://adamstockermans.com/projects/art/webgl</loc>
   </url>
 </urlset>

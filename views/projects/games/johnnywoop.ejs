@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="/css/johnnywoop.css" />
   </head>
   <body>
-    <%- include('../../partials/header.ejs') %>
-    <div class="right-container">
+    <header><%- include('../../partials/header.ejs') %></header>
     <main>
       <h2 class="project-title"><%= projectData.title %></h2>
       <iframe
@@ -22,9 +21,7 @@
         frameborder="0"
         allowfullscreen
       ></iframe>
-        <p class="project-description"><%= projectData.description %></p>
-        <!-- app store links -->
+      <p class="project-description"><%= projectData.description %></p>
         <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Play my game Johnny Woop and six other fantastic indie games at <a href="https://twitter.com/electricperfume?ref_src=twsrc%5Etfw">@electricperfume</a> this month on <a href="https://twitter.com/HandEyeSociety?ref_src=twsrc%5Etfw">@HandEyeSociety</a> Torontrons! <a href="https://t.co/1WigcBZBB7">pic.twitter.com/1WigcBZBB7</a></p>&mdash; Adam Stox ᕕ( ᐛ )ᕗ (@adam_stox) <a href="https://twitter.com/adam_stox/status/884162071281192960?ref_src=twsrc%5Etfw">July 9, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
   </body>
 </html>
