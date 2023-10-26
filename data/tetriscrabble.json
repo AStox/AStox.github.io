@@ -1,5 +1,5 @@
 {
-  "title": "StenographerGPT",
+  "title": "Tetriscrabble",
   "description": "A surprisingly difficult mash up of two classics: Tetris and Scrabble",
   "body1": "Combine tetris blocks in a grid to form words. Each square in the block has a letter, and combining them to form longer words nets you bigger points! Block don't fall like in tetris, but instead you have all the time you need to rotate and place them. You also don't build upwards like tetris, but outwards from the initial piece, like srabble. You lose when your blocks reach a certain radius. Forming a word removes those letters for the board, and any letters left isolated from the main jumble after that get added as bonus points and removed. No win condition. Just get a highscore!",
   "body2": "This game never made it out of the prototyping phase. It proved to be incredibly difficult to make words with random letters, and even when confining letters to more commonly used ones didn't help much. I think there is a fun game buried in here though and plan to come back to it one day.",
