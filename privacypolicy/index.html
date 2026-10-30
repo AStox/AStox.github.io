@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Knot Fun Privacy Policy</title>
+    <head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO-Focused Meta Tags -->
+  <meta name="title" content="Adam Stox - Game Developer, Solidity Developer, Digital Artist" />
+  <meta
+    name="description"
+    content="Portfolio of Adam Stox, a multifaceted developer and digital artist specializing in game development, blockchain development, and digital art."
+  />
+  <meta
+    name="keywords"
+    content="Adam Stox, Portfolio, Game Development, Solidity, Digital Art, Blockchain, Ethereum, Graphics Development, WebGL"
+  />
+
+  <!-- Open Graph / Social Media -->
+  <meta
+    property="og:title"
+    content="Adam Stox - Game Developer, Solidity Developer, Digital Artist"
+  />
+  <meta
+    property="og:description"
+    content="Explore the portfolio of Adam Stox, skilled in game development, blockchain tech, and digital artistry."
+  />
+  <meta property="og:image" content="public/images/adamstox.jpg" />
+  <meta property="og:url" content="adamstockermans.com" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Adam Stox - Game Developer, Solidity Developer, Digital Artist"
+  />
+  <meta
+    name="twitter:description"
+    content="Portfolio of Adam Stox, a versatile developer and digital artist."
+  />
+  <meta name="twitter:image" content="public/images/adamstox.jpg" />
+
+  <meta http-equiv="Expires" content="86400" />
+
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caprasimo&family=Moirai+One&family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Adam Stox",
+      "jobTitle": "Game Developer, Solidity Developer, Digital Artist",
+      "url": "https://adamstockermans.com",
+      "sameAs": [
+        "https://www.twitter.com/stoxophone",
+      ]
+    }
+  </script>
+  <script>
+    $(document).ready(function() {
+        const subtitle = $("#developerSubtitle");
+        const originalPos = subtitle.position();
+        const leftContainer = $(".left-container").width();
+        const initialsDiv = $(".initials");
+
+
+        $(".category-link").hover(
+          function() {
+            const offset = $(this).position();
+            subtitle.css({
+              top: offset.top - initialsDiv.height() - 5,
+              left: offset.left - originalPos.left + initialsDiv.width() + 10,
+            });
+          },
+          function() {
+            subtitle.css({
+              top: 0,
+              left: 0,
+            });
+          }
+        );
+
+      $('.category-link, .subcategory').click(function(){
+        const wasHidden = $(this).find('.subcategory').hasClass('hidden');
+
+        // Hide all subcategories
+        $('.category-link .subcategory').css('max-height', '0').addClass('hidden');
+
+        // If clicked subcategory was originally hidden, show it
+        if (wasHidden) {
+          const actualHeight = $(this).find('.subcategory').get(0).scrollHeight;
+          $(this).find('.subcategory').css('max-height', actualHeight + 'px').removeClass('hidden');
+        }
+        $('.subcategory').on('transitionend', function() {
+          if ($(this).hasClass('hidden')) return;
+
+          const offset = $(this).closest('.category-link').position();
+          // subtitle.css({
+          //   // position: "relative",
+          //   top: offset.top - originalPos.top - 1,
+          // });
+        });
+      });
+    });
+  </script>
+
+  <!-- Optional: Google Verification if you're using Google Search Console -->
+  <!-- <meta name="google-site-verification" content="your-google-verification-code" /> -->
+</head>
+
+    <link rel="stylesheet" href="/css/policy.css" />
+  </head>
+  <body>
+    <header><header class="left-container">
+  <div class="initials-container">
+    <div class="initials">
+      <h1>AS</h1>
+    </div>
+    <div class="subtitle-container">
+      <div class="subtitle" id="developerSubtitle">Developer</div>
+    </div>
+  </div>
+  <nav>
+    <ul class="category-list">
+      <li class="category-link">
+        AI
+        <ul class="subcategory hidden">
+          <li><a href="/projects/ai/stenographergpt">StenographerGPT</a></li>
+          <li><a href="/projects/ai/mealprepai">Meal Prep AI</a></li>
+          <li><a href="/projects/ai/blogtobot">BlogTO Bot</a></li>
+        </ul>
+      </li>
+      <li class="category-link">
+        Games
+        <ul class="subcategory hidden">
+          <li><a href="/projects/games/knotfun">Knot Fun</a></li>
+          <li><a href="/projects/games/palmpong">Palm Pong</a></li>
+          <li><a href="/projects/games/johnnywoop">Johnny Woop</a></li>
+          <li><a href="/projects/games/ghosthunters">Ghost Hunters</a></li>
+          <li><a href="/projects/games/pbjpuzzler">PB&J Puzzler</a></li>
+          <li><a href="/projects/games/badbarber">Bad Barber</a></li>
+          <li><a href="/projects/games/tankbot">Tank Bot</a></li>
+          <li><a href="/projects/games/tetriscrabble">Tetriscrabble</a></li>
+        </ul>
+      </li>
+      <li class="category-link">
+        Smart Contracts
+        <ul class="subcategory hidden">
+          <li><a href="/projects/smartcontracts/chainmail">Chain Mail</a></li>
+        </ul>
+      </li>
+      <li class="category-link">
+        Art
+        <ul class="subcategory hidden">
+          <li><a href="/projects/art/erosionsim">Erosion Simulator</a></li>
+          <li><a href="/projects/art/webgl">webGL stuff</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+</header>
+    <main>
+      <h2 class="project-title doc-title">Privacy Policy</h2>
+      <div class="doc">
+        <p class="meta">Knot Fun &middot; Effective 30 October 2026</p>
+
+        <p>
+          This policy explains what the Knot Fun app does with your data. The short version: Knot Fun
+          has no accounts and never asks for your name or email. Your progress stays on your device.
+          The game shows ads from Google, sends anonymous usage stats to PostHog (you can turn them
+          off), and lets Apple handle purchases.
+        </p>
+
+        <h3>Who we are</h3>
+        <p>
+          Knot Fun is made by Adam Stockermans, an independent developer ("we", "us"). We are
+          responsible for the data described here. For any question about this policy or your data,
+          email <a href="mailto:adamstox@gmail.com">adamstox@gmail.com</a>.
+        </p>
+
+        <h3>What stays on your device</h3>
+        <p>
+          Your progress, points, stats, unlocked themes, settings, a knot in progress, and which
+          purchases you own are saved in the app's own storage on your device. We don't upload it.
+          A few numbers from it (knots untied, points, level and which purchases you own) are part of
+          the usage stats below, when those are on. Like any app data, it can be included in your
+          device backups. Deleting the app deletes it.
+        </p>
+
+        <h3>Usage stats (PostHog)</h3>
+        <p>
+          Knot Fun collects anonymous usage statistics to understand how the game is played and to
+          make it better: which screens and buttons are used, how knots are started, finished or
+          left, purchases and ad views, settings, and crash reports, together with the app version,
+          device model, operating system, screen size and language. These statistics are tied only to
+          a random number created when the app is installed, never to your name, email, advertising
+          identifier or location, and your IP address is not stored. They are processed by
+          PostHog, Inc. on servers in the European Union and are not sold or used for advertising.
+        </p>
+        <p>
+          Your IP address is seen when the stats are sent, as with any internet connection, but the
+          game tells PostHog not to store it and not to use it to look up your location. We don't
+          create a profile of you. See
+          <a href="https://posthog.com/privacy">PostHog's privacy policy</a>.
+        </p>
+        <p>
+          <strong>Turning stats off.</strong> Tap the gear on the Home screen to open Settings and
+          switch off "share anonymous usage stats". While it is off nothing is sent, and any stats
+          waiting on your device are deleted.
+        </p>
+        <p>
+          <strong>EEA and UK.</strong> Where the law requires consent (we use Google's consent
+          service to tell), stats are held on your device and not sent until you say yes. If you say
+          no, the held stats are deleted. You can change your answer at any time with the same
+          switch in Settings.
+        </p>
+
+        <h3>Ads (Google AdMob)</h3>
+        <p>
+          Knot Fun is free because of a few ads between knots. Ads never interrupt a knot you are
+          working on. There is also an optional "ad break": watch one ad and the next 3 knots have no
+          ads. Ads are served by Google AdMob and are limited to content rated G.
+        </p>
+        <p>
+          To show and measure ads, Google's ad software in the app may collect your IP address (which
+          can give a general location), device identifiers (the advertising identifier only if you
+          allow tracking, plus identifiers limited to the app or developer), the ads you see and tap,
+          and basic diagnostic and performance data. Google uses this under its own policies:
+          <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and
+          <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a>.
+        </p>
+        <p>
+          If you buy either purchase, ads stop. From the next launch the game no longer starts
+          Google's ad software, and you won't see the consent or tracking questions.
+        </p>
+
+        <h3>Consent and tracking</h3>
+        <p>
+          The game asks nothing at launch. After you win your first knot, it asks in this order:
+        </p>
+        <ul>
+          <li>
+            <strong>Google's consent form</strong>, only where the law requires it (for example the
+            EEA and the UK). You can change your choice later in the Shop under "privacy choices".
+            If you don't agree, Google limits the ads it shows as its rules require, and we never ask
+            about tracking.
+          </li>
+          <li>
+            <strong>Apple's tracking question</strong> on iPhone and iPad (App Tracking
+            Transparency). A short note from us comes first, then Apple's own prompt. If you allow
+            tracking, Google can use your device's advertising identifier to match ads to what you
+            like. If you ask the app not to track, the identifier is not shared. You see the same
+            number of ads either way. You can change this at any time in your device's Settings
+            under Privacy &amp; Security, Tracking.
+          </li>
+        </ul>
+        <p>
+          In the EEA and UK the same moment also asks whether to share usage stats, with the switch
+          off until you turn it on.
+        </p>
+
+        <h3>Purchases</h3>
+        <p>
+          Knot Fun has two optional one-time purchases: Remove Ads, and Knot Fun Complete (no ads and
+          every theme unlocked). Payment is handled entirely by Apple. We never see your name, Apple
+          ID, payment card or address. The game only gets a confirmation of which item you bought and
+          saves it on your device. "restore purchases" in the Shop asks Apple for that confirmation
+          again. The game talks to Apple through Unity's in-app purchasing library, which does not
+          collect personal data. If usage stats are on, they include purchase steps (for example
+          opened, completed or cancelled) with the price and currency. See
+          <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.
+        </p>
+
+        <h3>The Unity engine</h3>
+        <p>
+          Knot Fun is built with the Unity game engine. Unity Technologies may receive basic
+          technical information about your device, such as its model, operating system, language,
+          graphics hardware and an app-specific device identifier, to support the engine. See
+          <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity's player privacy policy</a>.
+        </p>
+
+        <h3>Sharing knots</h3>
+        <p>
+          Share pictures and videos are made on your device and go only where you send them: saved to
+          your photos (if you allow it) or sent through your device's share sheet. We don't upload
+          them.
+        </p>
+        <p>
+          A shared knot link contains only a knot code: the difficulty, the theme and a number that
+          rebuilds the same knot. It has nothing about you in it. If the person opening the link
+          doesn't have the game, a small web page hosted on GitHub Pages opens. That page has no
+          tracking of its own, but like any website host, GitHub may log the visit, including the IP
+          address. See
+          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.
+        </p>
+
+        <h3>Why we use your data (EEA and UK)</h3>
+        <ul>
+          <li>Usage stats: your consent in the EEA and UK. Elsewhere, our legitimate interest in fixing and improving the game, with a switch to turn them off.</li>
+          <li>Ads: your consent through Google's form where the law requires it. Google is responsible for its own use of the data.</li>
+          <li>Purchases: to give you what you paid for.</li>
+          <li>Emails you send us: to answer you.</li>
+        </ul>
+
+        <h3>How long we keep it</h3>
+        <ul>
+          <li>Data on your device: until you delete the app. Turning stats off deletes stats waiting to be sent.</li>
+          <li>Usage stats: PostHog keeps them for one year on our current plan. If that changes, we will update this policy.</li>
+          <li>Ad data: Google keeps it under its own policies.</li>
+          <li>Emails: only as long as we need to help you.</li>
+        </ul>
+
+        <h3>Where your data is processed</h3>
+        <p>
+          Usage stats are stored by PostHog on servers in the European Union. Google and Apple
+          process data in many countries, including the United States, under their own policies and
+          safeguards.
+        </p>
+
+        <h3>Children</h3>
+        <p>
+          Knot Fun is made for a general audience. It is not directed at children and is not in the
+          App Store's Kids category. We don't knowingly collect personal information from children
+          under 13 (or the minimum age where you live). Ads are limited to content rated G, and usage
+          stats are anonymous. If you think a child has sent us personal information, for example by
+          email, contact us and we will delete it.
+        </p>
+
+        <h3>Your rights and choices</h3>
+        <ul>
+          <li>Turn usage stats off in Settings, "share anonymous usage stats".</li>
+          <li>Change ad consent in the Shop, "privacy choices" (shown where the law requires it), and tracking in your device's Settings.</li>
+          <li>Remove ads by buying either purchase.</li>
+          <li>
+            Delete everything on your device by deleting the app. The random install number lives in
+            the app's storage, so deleting the app also cuts the link to any past stats. A new
+            install gets a new number.
+          </li>
+          <li>
+            Ask us to access or delete analytics data by emailing
+            <a href="mailto:adamstox@gmail.com">adamstox@gmail.com</a>. Because the stats are
+            anonymous and the install number is never shown to us or to you, we usually can't tell
+            which stats are yours. If you give us details that let us find them (such as your device
+            model and when you played), we will delete what we can match.
+          </li>
+        </ul>
+        <p>
+          Depending on where you live (for example the EEA, the UK, Canada or California), you may
+          have the right to access, correct or delete your personal data, to object to its use, to
+          withdraw consent, and to complain to your local data protection authority. We don't sell
+          your personal information.
+        </p>
+
+        <h3>Changes</h3>
+        <p>
+          If this policy changes, we will update this page and the effective date at the top. If a
+          change is important, we will also mention it in the app's update notes.
+        </p>
+
+        <h3>Contact</h3>
+        <p>
+          Adam Stockermans, <a href="mailto:adamstox@gmail.com">adamstox@gmail.com</a>.
+          Support for the game: <a href="/knotfun">adamstockermans.com/knotfun</a>.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

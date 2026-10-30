@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Knot Fun Support</title>
+    <head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO-Focused Meta Tags -->
+  <meta name="title" content="Adam Stox - Game Developer, Solidity Developer, Digital Artist" />
+  <meta
+    name="description"
+    content="Portfolio of Adam Stox, a multifaceted developer and digital artist specializing in game development, blockchain development, and digital art."
+  />
+  <meta
+    name="keywords"
+    content="Adam Stox, Portfolio, Game Development, Solidity, Digital Art, Blockchain, Ethereum, Graphics Development, WebGL"
+  />
+
+  <!-- Open Graph / Social Media -->
+  <meta
+    property="og:title"
+    content="Adam Stox - Game Developer, Solidity Developer, Digital Artist"
+  />
+  <meta
+    property="og:description"
+    content="Explore the portfolio of Adam Stox, skilled in game development, blockchain tech, and digital artistry."
+  />
+  <meta property="og:image" content="public/images/adamstox.jpg" />
+  <meta property="og:url" content="adamstockermans.com" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Adam Stox - Game Developer, Solidity Developer, Digital Artist"
+  />
+  <meta
+    name="twitter:description"
+    content="Portfolio of Adam Stox, a versatile developer and digital artist."
+  />
+  <meta name="twitter:image" content="public/images/adamstox.jpg" />
+
+  <meta http-equiv="Expires" content="86400" />
+
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caprasimo&family=Moirai+One&family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Adam Stox",
+      "jobTitle": "Game Developer, Solidity Developer, Digital Artist",
+      "url": "https://adamstockermans.com",
+      "sameAs": [
+        "https://www.twitter.com/stoxophone",
+      ]
+    }
+  </script>
+  <script>
+    $(document).ready(function() {
+        const subtitle = $("#developerSubtitle");
+        const originalPos = subtitle.position();
+        const leftContainer = $(".left-container").width();
+        const initialsDiv = $(".initials");
+
+
+        $(".category-link").hover(
+          function() {
+            const offset = $(this).position();
+            subtitle.css({
+              top: offset.top - initialsDiv.height() - 5,
+              left: offset.left - originalPos.left + initialsDiv.width() + 10,
+            });
+          },
+          function() {
+            subtitle.css({
+              top: 0,
+              left: 0,
+            });
+          }
+        );
+
+      $('.category-link, .subcategory').click(function(){
+        const wasHidden = $(this).find('.subcategory').hasClass('hidden');
+
+        // Hide all subcategories
+        $('.category-link .subcategory').css('max-height', '0').addClass('hidden');
+
+        // If clicked subcategory was originally hidden, show it
+        if (wasHidden) {
+          const actualHeight = $(this).find('.subcategory').get(0).scrollHeight;
+          $(this).find('.subcategory').css('max-height', actualHeight + 'px').removeClass('hidden');
+        }
+        $('.subcategory').on('transitionend', function() {
+          if ($(this).hasClass('hidden')) return;
+
+          const offset = $(this).closest('.category-link').position();
+          // subtitle.css({
+          //   // position: "relative",
+          //   top: offset.top - originalPos.top - 1,
+          // });
+        });
+      });
+    });
+  </script>
+
+  <!-- Optional: Google Verification if you're using Google Search Console -->
+  <!-- <meta name="google-site-verification" content="your-google-verification-code" /> -->
+</head>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/policy.css" />
+  </head>
+  <body>
+    <header><header class="left-container">
+  <div class="initials-container">
+    <div class="initials">
+      <h1>AS</h1>
+    </div>
+    <div class="subtitle-container">
+      <div class="subtitle" id="developerSubtitle">Developer</div>
+    </div>
+  </div>
+  <nav>
+    <ul class="category-list">
+      <li class="category-link">
+        AI
+        <ul class="subcategory hidden">
+          <li><a href="/projects/ai/stenographergpt">StenographerGPT</a></li>
+          <li><a href="/projects/ai/mealprepai">Meal Prep AI</a></li>
+          <li><a href="/projects/ai/blogtobot">BlogTO Bot</a></li>
+        </ul>
+      </li>
+      <li class="category-link">
+        Games
+        <ul class="subcategory hidden">
+          <li><a href="/projects/games/knotfun">Knot Fun</a></li>
+          <li><a href="/projects/games/palmpong">Palm Pong</a></li>
+          <li><a href="/projects/games/johnnywoop">Johnny Woop</a></li>
+          <li><a href="/projects/games/ghosthunters">Ghost Hunters</a></li>
+          <li><a href="/projects/games/pbjpuzzler">PB&J Puzzler</a></li>
+          <li><a href="/projects/games/badbarber">Bad Barber</a></li>
+          <li><a href="/projects/games/tankbot">Tank Bot</a></li>
+          <li><a href="/projects/games/tetriscrabble">Tetriscrabble</a></li>
+        </ul>
+      </li>
+      <li class="category-link">
+        Smart Contracts
+        <ul class="subcategory hidden">
+          <li><a href="/projects/smartcontracts/chainmail">Chain Mail</a></li>
+        </ul>
+      </li>
+      <li class="category-link">
+        Art
+        <ul class="subcategory hidden">
+          <li><a href="/projects/art/erosionsim">Erosion Simulator</a></li>
+          <li><a href="/projects/art/webgl">webGL stuff</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+</header>
+    <main>
+      <h2 class="project-title doc-title">Knot Fun Support</h2>
+      <div class="doc">
+        <h3>Contact</h3>
+        <p>
+          Email <a href="mailto:adamstox@gmail.com">adamstox@gmail.com</a>. Tell us your device
+          model, its iOS version and what happened, and add a screenshot if you can.
+        </p>
+
+        <h3>Questions</h3>
+
+        <h4>How do I remove ads?</h4>
+        <p>
+          Open the Shop and buy Remove Ads, or Knot Fun Complete (no ads and every theme unlocked).
+          Each is a one-time purchase. There are no subscriptions.
+        </p>
+
+        <h4>I reinstalled or got a new phone and my purchase is gone.</h4>
+        <p>
+          Open the Shop and tap "restore purchases" while signed in with the same Apple ID you
+          bought with. Progress is saved only on your device, so deleting the app also deletes your
+          progress and stats.
+        </p>
+
+        <h4>When do ads show?</h4>
+        <p>
+          Never during a knot. Your first 3 knots have no ads, then an ad can show between knots, at
+          most one every few minutes. The "ad break" on the Home screen lets you watch one ad to skip
+          ads for your next 3 knots, once a day.
+        </p>
+
+        <h4>How do I report an ad?</h4>
+        <p>
+          Email us with a screenshot of the ad, or a description of it and roughly when you saw it,
+          so we can block it.
+        </p>
+
+        <h4>How do themes unlock?</h4>
+        <p>
+          By playing. Themes unlock for free as you untangle knots, and the Knots tab shows what
+          unlocks each one. Knot Fun Complete unlocks all of them at once.
+        </p>
+
+        <h4>What is the Daily Knot?</h4>
+        <p>
+          One expert knot a day, the same for everyone. It opens after about 10 completed knots.
+        </p>
+
+        <h4>How do I share a knot?</h4>
+        <p>
+          After you untangle a knot, tap "share your knot". A friend who taps your link plays the
+          same knot. If the link opens a web page instead of the game, install Knot Fun and tap the
+          link again.
+        </p>
+
+        <h4>How do I turn off usage stats or ad tracking?</h4>
+        <p>
+          Usage stats: tap the gear on the Home screen and switch off "share anonymous usage stats".
+          Ad tracking: in your device's Settings, under Privacy &amp; Security, Tracking. Where the
+          law requires it, the Shop also has "privacy choices" for Google's ad consent.
+        </p>
+
+        <h3>Links</h3>
+        <ul>
+          <li><a href="/privacypolicy">Privacy policy</a></li>
+          <li><a href="https://apps.apple.com/app/knot-fun/id1156969087">Knot Fun on the App Store</a></li>
+          <li><a href="/projects/games/knotfun">About Knot Fun</a></li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

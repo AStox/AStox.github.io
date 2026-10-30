@@ -1,0 +1,52 @@
+/* Text pages: privacy policy and Knot Fun support. */
+
+.doc-title {
+  font-size: 5em;
+  margin-bottom: 1rem;
+}
+
+.doc {
+  max-width: 42rem;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--menu1-color);
+}
+
+.doc h3 {
+  font-family: var(--caprasimo);
+  font-weight: 400;
+  font-size: 1.6em;
+  color: var(--title-color);
+  margin: 2.5rem 0 0.5rem;
+}
+
+.doc h4 {
+  font-family: var(--caprasimo);
+  font-weight: 400;
+  font-size: 1.2em;
+  margin: 1.5rem 0 0.25rem;
+}
+
+.doc ul {
+  padding-left: 1.25rem;
+}
+
+.doc li {
+  margin: 0.35rem 0;
+}
+
+.doc a {
+  text-decoration: underline;
+}
+
+.doc .meta {
+  text-align: center;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 768px) {
+  .doc-title {
+    font-size: 3em;
+  }
+}
